@@ -4,12 +4,11 @@ from peft import PeftModel
 import torch
 import re
 
-# Path to your finetuned Llama model adapters
+# Path to  finetuned Llama model adapters
 FINETUNED_MODEL_PATH = "Finetuning/finetuned_model" 
-# The name of the original Llama model you fine-tuned
-BASE_MODEL_NAME = "meta-llama/Llama-3-8B-Instruct" # Replace with your specific Llama model name
+BASE_MODEL_NAME = "meta-llama/Llama-3-8B-Instruct" 
 
-# Device selection (GPU if available, else CPU)
+# Device selection
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Global variables to hold the loaded model and tokenizer
@@ -86,4 +85,5 @@ def generate_questions(skills, num_questions=5):
     ]
     questions = [q for q in questions if "?" in q or re.match(r'^\d+\.', q)]
     
+
     return questions[:num_questions]
