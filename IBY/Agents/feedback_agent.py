@@ -4,12 +4,10 @@ from peft import PeftModel
 import torch
 import re
 
-# Path to your finetuned Llama model adapters
 FINETUNED_MODEL_PATH = "Finetuning/finetuned_model" 
-# The original Llama model you fine-tuned
 BASE_MODEL_NAME = "meta-llama/Llama-3-8B-Instruct"
 
-# Device selection (GPU if available, else CPU)
+# Device selection
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Global variables to hold the loaded model and tokenizer
@@ -84,3 +82,4 @@ def generate_feedback(question, user_answer):
     # Extract feedback after "Feedback:" if present
     feedback = result.split("Feedback:")[-1].strip()
     return feedback
+
