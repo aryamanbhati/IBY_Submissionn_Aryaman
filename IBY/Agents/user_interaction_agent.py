@@ -1,7 +1,6 @@
 # agents/user_interaction_agent.py
 import whisper
 
-# You can change "base" to "small", "medium", or "large" for higher accuracy (but slower)
 WHISPER_MODEL_SIZE = "base"
 
 try:
@@ -30,4 +29,5 @@ def transcribe_audio(audio_file_path):
         return result.get("text", "")
     except Exception as e:
         print(f"Transcription failed: {e}")
+
         return f"Transcription failed: {e}"
