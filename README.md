@@ -1,5 +1,4 @@
-**Aryaman Singh  Bhati || Indian Institute of Technology Delhi || Textile Engineering
-**
+Aryaman Singh  Bhati || Indian Institute of Technology Delhi || Textile Engineering
 
 
 
