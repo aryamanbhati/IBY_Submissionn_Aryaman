@@ -14,7 +14,7 @@ def run_fine_tuning(dataset_path="./Finetuning/Train.csv", output_dir="./Finetun
     # Step 1: Prepare the Dataset
     try:
         df = pd.read_csv(dataset_path)
-        # Assuming the CSV has 'skills' and 'output' columns
+        
         dataset = load_dataset("csv", data_files=dataset_path)
     except FileNotFoundError:
         print(f"Dataset not found at {dataset_path}. Please ensure your dataset exists.")
@@ -92,4 +92,5 @@ def run_fine_tuning(dataset_path="./Finetuning/Train.csv", output_dir="./Finetun
     print(f"LoRA adapters saved to {output_dir}")
 
 if __name__ == "__main__":
+
     run_fine_tuning()
